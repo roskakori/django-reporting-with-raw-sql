@@ -1,0 +1,15 @@
+<h1>Issues</h1>
+
+<ul>
+  {% for issue in issues %}
+    <li>
+      #{{ issue.id }} ({{ issue.state }}) {{ issue.title }} {% if issue.assignee
+      %} @{{ issue.assignee.username }} {% endif %} {% if issue.labels.exists %}
+  <br />
+  {% for label in issue.labels.all %} {{ label.title }} {% endfor %} {% endif
+  %}
+</li>
+{% empty %}
+  <li>No issues found.</li>
+{% endfor %}
+</ul>
