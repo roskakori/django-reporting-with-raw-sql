@@ -1,1 +1,0 @@
-# Copyright (c) 2025 Thomas Aglassinger. Distributed under the MIT license.

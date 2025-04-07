@@ -10,6 +10,4 @@ select
     username,
     trim(concat(first_name, ' ', last_name)) as name
 from
-    auth_user
-
-select * from report.user
+    auth_user;

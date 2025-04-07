@@ -2,6 +2,13 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/report/ddls/create_schema.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/report/ddls/create_user_if_not_exists.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/report/ddls/create_view_issue_kind_missing.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/report/ddls/create_view_issue_kind_multiples.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/report/ddls/create_view_issue_kind_unique.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/report/ddls/create_view_user.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/report/ddls/select_issue_kind_minimal.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/report/ddls/select_issue_kind_windowing.sql" dialect="PostgreSQL" />
+    <file url="PROJECT" dialect="PostgreSQL" />
   </component>
 </project>

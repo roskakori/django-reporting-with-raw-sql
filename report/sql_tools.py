@@ -7,6 +7,10 @@ from typing import Any
 from django.db import connection, transaction
 
 _VALID_SQL_NAME_REGEX = re.compile(r"^[a-zA-Z0-9_\-.]+$")
+_DDL_FOLDER = Path(__file__).parent / "ddls"
+_COLON_NAME_REGEX = re.compile(r"[^:]:(\w+)")
+_VARIABLE_PREFIX = "${"
+_VARIABLE_SUFFIX = "}"
 
 
 def checked_sql_name(name: str, value: str, allow_empty: bool = False) -> str:
@@ -114,9 +118,3 @@ def has_report_view(view_name: str) -> bool:
         cursor.execute(sql, {"view_name": view_name})
         result = cursor.fetchone()
     return result[0]
-
-
-_DDL_FOLDER = Path(__file__).parent / "ddls"
-_COLON_NAME_REGEX = re.compile(r"[^:]:(\w+)")
-_VARIABLE_PREFIX = "${"
-_VARIABLE_SUFFIX = "}"
